@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="830.0" prefWidth="1118.0" stylesheets="@fxml.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.GestionlocationController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="heurefin1" layoutX="90.0" layoutY="-3.0" prefHeight="771.0" prefWidth="877.0" styleClass="mainFxmlClass" translateX="100.0">
+         <stylesheets>
+            <URL value="@fxmlshow.css" />
+         </stylesheets>
+         <children>
+            <TableView fx:id="tableView" layoutX="14.0" layoutY="75.0" prefHeight="275.0" prefWidth="525.0">
+               <columns>
+                  
+                  <TableColumn fx:id="i" prefWidth="41.60000705718994" text="id" visible="false" />
+                  <TableColumn fx:id="idvelo" prefWidth="92.80001831054688" text="id velo" />
+                  <TableColumn fx:id="prix" prefWidth="231.99996948242188" text="date_debut" />
+                  <TableColumn fx:id="marque" minWidth="0.0" prefWidth="164.0" text="date_fin" />
+                  
+               </columns>
+            </TableView>
+            <Button layoutX="575.0" layoutY="259.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="32.0" prefWidth="146.0" text="Ajouter" />
+            <DatePicker fx:id="datedebut" layoutX="662.0" layoutY="137.0" prefHeight="26.0" prefWidth="102.0" />
+            <DatePicker fx:id="datefin" layoutX="662.0" layoutY="193.0" prefHeight="12.0" prefWidth="102.0" />
+            <ComboBox fx:id="combo" layoutX="681.0" layoutY="77.0" prefHeight="28.0" prefWidth="194.0" />
+            <Label layoutX="604.0" layoutY="82.0" text="ID">
+               <font>
+                  <Font name="Berlin Sans FB" size="12.0" />
+               </font></Label>
+            <Label layoutX="575.0" layoutY="140.0" text="Date debut" />
+            <Label layoutX="584.0" layoutY="197.0" text="Date fin" />
+            <Button layoutX="12.0" layoutY="374.0" mnemonicParsing="false" onAction="#Refresh" prefHeight="32.0" prefWidth="250.0" text="Refresh" />
+            <Button layoutX="301.0" layoutY="374.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="32.0" prefWidth="239.0" text="supprimer" />
+            <Button layoutX="730.0" layoutY="259.0" mnemonicParsing="false" onAction="#update" prefHeight="32.0" prefWidth="145.0" text="update" />
+            <Button layoutX="7.0" layoutY="434.0" mnemonicParsing="false" onAction="#dateajour" prefHeight="32.0" prefWidth="533.0" text="mettre a jour date actuelle" />
+            <Button layoutX="596.0" layoutY="434.0" minHeight="0.0" mnemonicParsing="false" onAction="#verifier" prefHeight="39.0" prefWidth="268.0" text="Verifier dispo date" />
+            <Label layoutX="572.0" layoutY="381.0" text="Date debut" />
+            <DatePicker fx:id="datedebut1" layoutX="648.0" layoutY="377.0" prefHeight="26.0" prefWidth="90.0" />
+            <TextField fx:id="heuredebut1" layoutX="801.0" layoutY="377.0" prefHeight="26.0" prefWidth="65.0" />
+            <Label layoutX="747.0" layoutY="381.0" text="Heure" />
+            <Label layoutX="777.0" layoutY="141.0" text="Heure" />
+            <Label layoutX="777.0" layoutY="197.0" text="Heure" />
+            <TextField fx:id="heuredebut" layoutX="823.0" layoutY="137.0" prefHeight="26.0" prefWidth="54.0" />
+            <TextField fx:id="heurefin" layoutX="823.0" layoutY="193.0" prefHeight="26.0" prefWidth="54.0" />
+            <Button layoutX="795.0" layoutY="539.0" mnemonicParsing="false" onAction="#retour" text="Retour" />
+            
+         </children>
+      </AnchorPane>
+      <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="815.0" prefWidth="172.0" style="-fx-background-color: #292F35;" translateX="-20.0">
+         <children>
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="175.0" style="-fx-background-color: #2BBFBD;">
+               <children>
+                  <ImageView fitHeight="200.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" smooth="false" translateX="-10.0">
+                     <image>
+                        <Image url="@images/logo-bascla.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets top="-10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="-10.0" />
+               </padding>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="526.0" prefWidth="172.0">
+               <children>
+                  <FontAwesomeIcon fill="#575454" iconName="BICYCLE" size="2em" translateY="20.0">
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                  </FontAwesomeIcon>
+                  <Button fx:id="Ecommerce" mnemonicParsing="false" onAction="#Ecommerce" style="-fx-background-color: #0000;" textFill="TRANSPARENT" />
+                  <FontAwesomeIcon fill="#575454" iconName="WRENCH" size="2em" translateY="20.0">
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                  </FontAwesomeIcon>
+                  <Button fx:id="amine" layoutX="58.0" layoutY="80.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="56.0" style="-fx-background-color: #0000;" textFill="TRANSPARENT" />
+                  <FontAwesomeIcon fill="#575454" iconName="FLAG" size="2em" translateY="20.0">
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                  </FontAwesomeIcon>
+                  <Button fx:id="me" layoutX="57.0" layoutY="166.0" mnemonicParsing="false" onAction="#OpenEvents2" prefHeight="50.0" prefWidth="56.0" style="-fx-background-color: #0000;" textFill="TRANSPARENT" />
+                  <FontAwesomeIcon fill="#575454" iconName="GROUP" size="2em" translateY="20.0">
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                  </FontAwesomeIcon>
+                  <Button fx:id="Blog" layoutX="57.0" layoutY="255.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="56.0" style="-fx-background-color: #0000;" textFill="TRANSPARENT" />
+                  <FontAwesomeIcon fill="#575454" iconName="COMMENT" size="2em" translateY="20.0">
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                  </FontAwesomeIcon>
+                  <Button fx:id="Forum" layoutX="57.0" layoutY="344.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="56.0" style="-fx-background-color: #0000;" textFill="TRANSPARENT" />
+                  <FontAwesomeIcon fill="#575454" iconName="ANGELLIST" layoutX="48.0" layoutY="377.0" size="2em" translateY="60.0">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </FontAwesomeIcon>
+                  <Button fx:id="Charity" layoutX="57.0" layoutY="433.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="56.0" style="-fx-background-color: #0000;" textFill="TRANSPARENT" translateY="35.0" />
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

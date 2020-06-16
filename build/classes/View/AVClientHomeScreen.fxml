@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackepane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.AVClientHomeScreenController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1366.0" style="-fx-background-size: cover; -fx-background-image:url(/imgVelo/BikeShopBG0.png);" stylesheets="@velo.css">
+         <children>
+            <Label layoutX="508.0" layoutY="57.0" text="Client Home Screen" textFill="#ff5e00">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Label>
+            <Pane fx:id="pane_appointement" layoutX="426.0" layoutY="198.0" onMouseClicked="#Appointement" onMouseEntered="#mouse_hover_appointement" onMouseExited="#mouse_exit_appointement" opacity="0.7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
+               <children>
+                  <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="55.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgVelo/calendar.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="60.0" layoutY="152.0" text="Appointement">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pane_logout" layoutX="1111.0" layoutY="579.0" onMouseClicked="#logout" onMouseEntered="#mouse_hover_logout" onMouseExited="#mouse_exit_logout" opacity="0.7" prefHeight="137.0" prefWidth="115.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
+               <children>
+                  <ImageView fitHeight="83.0" fitWidth="47.0" layoutX="34.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgVelo/logout.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="34.0" layoutY="87.0" text="Logout">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pane_exit" layoutX="1237.0" layoutY="579.0" onMouseClicked="#exit" onMouseEntered="#mouse_hover_exit" onMouseExited="#mouse_exit_exit" opacity="0.7" prefHeight="137.0" prefWidth="115.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
+               <children>
+                  <ImageView fitHeight="59.0" fitWidth="68.0" layoutX="28.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgVelo/exit.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="45.0" layoutY="94.0" text="Exit">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pane_reclamation" layoutX="680.0" layoutY="198.0" onMouseClicked="#Reclamation" onMouseEntered="#mouse_hover_reclamation" onMouseExited="#mouse_exit_reclamation" opacity="0.7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
+               <children>
+                  <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="55.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgVelo/email.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="63.0" layoutY="158.0" text="Reclamation">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pane_repair" layoutX="928.0" layoutY="198.0" onMouseClicked="#Repair" onMouseEntered="#mouse_hover_repair" onMouseExited="#mouse_exit_repair" opacity="0.7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
+               <children>
+                  <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="55.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgVelo/fix.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="79.0" layoutY="154.0" text="Repair">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pane_delivery" layoutX="530.0" layoutY="432.0" onMouseClicked="#Delivery" onMouseEntered="#mouse_hover_delivery" onMouseExited="#mouse_exit_delivery" opacity="0.7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
+               <children>
+                  <ImageView fitHeight="90.0" fitWidth="96.0" layoutX="55.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgVelo/delivery.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="75.0" layoutY="160.0" text="Deivery">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pane_mailer" layoutX="780.0" layoutY="432.0" onMouseClicked="#Mailer" onMouseEntered="#mouse_hover_mailer" onMouseExited="#mouse_exit_mailer" opacity="0.7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
+               <children>
+                  <ImageView fitHeight="90.0" fitWidth="96.0" layoutX="55.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgVelo/gmail.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="75.0" layoutY="160.0" text="Mailer">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

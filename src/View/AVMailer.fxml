@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackepane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="544.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.AVMailerController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="512.0" prefWidth="474.0" style="-fx-background-image: url(imgVelo/mail.jpg); -fx-background-size: cover;">
+         <children>
+            <Pane layoutX="84.0" layoutY="21.0" opacity="0.7" prefHeight="554.0" prefWidth="377.0" style="-fx-background-color: #fff; -fx-background-radius: 6px;">
+               <children>
+                  <Pane layoutX="27.0" layoutY="47.0" opacity="0.7" prefHeight="441.0" prefWidth="324.0" style="-fx-border-radius: 15; -fx-border-color: #09e2a7; -fx-border-width: 2px;">
+                     <children>
+                        <JFXTextField fx:id="mail_description" focusColor="#09e2a7" labelFloat="true" layoutX="61.0" layoutY="279.0" prefHeight="109.0" prefWidth="190.0" promptText="Description" unFocusColor="#09e2a7">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="mailaddress" focusColor="#09e2a7" labelFloat="true" layoutX="61.0" layoutY="66.0" prefHeight="25.0" prefWidth="190.0" promptText="Email Address" unFocusColor="#09e2a7">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXPasswordField fx:id="mailpassword" focusColor="#09e2a7" labelFloat="true" layoutX="61.0" layoutY="125.0" prefHeight="25.0" prefWidth="190.0" promptText="password" unFocusColor="#09e2a7">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </JFXPasswordField>
+                        <JFXTextField fx:id="mail_subject" focusColor="#09e2a7" labelFloat="true" layoutX="61.0" layoutY="178.0" prefHeight="25.0" prefWidth="190.0" promptText="Subject" unFocusColor="#09e2a7">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <JFXButton buttonType="RAISED" layoutX="232.0" layoutY="524.0" onMouseClicked="#SendMail" prefHeight="42.0" prefWidth="81.0" ripplerFill="WHITE" style="-fx-background-color: #09e2a7;" text="Send" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="209.0" layoutY="28.0" text="Contact Admin" textFill="#09e2a7">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Pane fx:id="pane_exit" focusTraversable="true" layoutX="501.0" layoutY="2.0" onMouseClicked="#MailExit" onMouseEntered="#mouse_hover_mail" onMouseExited="#mouse_exit_mail" opacity="0.6" prefHeight="42.0" prefWidth="41.0">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="8.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgVelo/cancel.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pane_logout1" focusTraversable="true" layoutX="501.0" layoutY="42.0" onMouseClicked="#MailLogout" onMouseEntered="#mouse_hover_logout" onMouseExited="#mouse_exit_logout" opacity="0.6" prefHeight="42.0" prefWidth="41.0">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="8.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgVelo/003-logout.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

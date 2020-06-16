@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="831.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.FXMLDocumentController">
+   <children>
+      <AnchorPane prefHeight="528.0" prefWidth="200.0" style="-fx-background-color: black;">
+         <children>
+            <JFXButton fx:id="chart" layoutX="28.0" layoutY="206.0" onAction="#chartybutton" prefHeight="32.0" prefWidth="129.0" text="Charity" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <Pane prefHeight="148.0" prefWidth="200.0" style="-fx-background-color: #D4E0CE;">
+               <children>
+                  <TextArea layoutX="22.0" layoutY="131.0" prefHeight="32.0" prefWidth="156.0" text="      Wijden Dalhoumi" />
+               </children>
+            </Pane>
+            <JFXButton fx:id="rec" layoutX="28.0" layoutY="264.0" onAction="#recyclebutton" prefHeight="32.0" prefWidth="129.0" text="Recycle" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="tb" layoutX="28.0" layoutY="318.0" onAction="#trainb" prefHeight="32.0" prefWidth="129.0" text="Training" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="part" layoutX="30.0" layoutY="372.0" onAction="#partbt" prefHeight="32.0" prefWidth="129.0" text="Participants" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <Pane fx:id="MainPane" layoutX="200.0" layoutY="111.0" prefHeight="418.0" prefWidth="633.0" />
+   </children>
+</AnchorPane>

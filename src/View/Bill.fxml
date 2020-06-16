@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="nom" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.BillController">
+    <stylesheets>
+        <URL value="@bill.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="27.0" layoutY="105.0" prefHeight="23.0" prefWidth="66.0" text="Name :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="162.0" text="Last Name :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="223.0" text="Ammount :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="CreatePdf" layoutX="408.0" layoutY="319.0" mnemonicParsing="false" onAction="#CreatePdf" prefHeight="30.0" prefWidth="136.0" text="ok" />
+      <Text fill="#20a6d7" layoutX="30.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Bill">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="name" layoutX="172.0" layoutY="103.0" />
+      <TextField fx:id="last" layoutX="172.0" layoutY="160.0" />
+      <TextField fx:id="a" layoutX="172.0" layoutY="221.0" />
+   </children>
+</AnchorPane>

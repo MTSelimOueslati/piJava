@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackepane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.AVAdminAppointementController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1366.0" style="-fx-background-size: cover; -fx-background-image:url(/imgVelo/bikeBG1.jpg);">
+         <children>
+            <JFXTreeTableView fx:id="treeView" layoutX="471.0" layoutY="52.0" opacity="0.7" prefHeight="447.0" prefWidth="843.0" stylesheets="@velo.css" AnchorPane.bottomAnchor="241.0" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="52.0" />
+            <Pane layoutX="21.0" layoutY="15.0" opacity="0.7" prefHeight="700.0" prefWidth="414.0" style="-fx-background-color: #fff; -fx-background-radius: 6px;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="937.0" AnchorPane.topAnchor="15.0">
+               <children>
+                  <Pane layoutX="23.0" layoutY="141.0" prefHeight="222.0" prefWidth="368.0" style="-fx-border-radius: 15; -fx-border-color: #ccc; -fx-border-width: 2px;">
+                     <children>
+                        <JFXTextField fx:id="idappointement" focusColor="#09e2a7" labelFloat="true" layoutX="148.0" layoutY="41.0" prefHeight="25.0" prefWidth="165.0" promptText="Appointement id" />
+                        <Label layoutX="39.0" layoutY="32.0" text="id appointement">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="date" focusColor="#09e2a7" labelFloat="true" layoutX="148.0" layoutY="82.0" prefHeight="25.0" prefWidth="165.0" promptText="Appointement Date" />
+                        <Label layoutX="52.0" layoutY="86.0" text="date">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="description" focusColor="#09e2a7" labelFloat="true" layoutX="152.0" layoutY="134.0" prefHeight="25.0" prefWidth="165.0" promptText="Appointement Description" />
+                        <Label layoutX="39.0" layoutY="137.0" text="description">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="23.0" layoutY="490.0" prefHeight="97.0" prefWidth="368.0" style="-fx-border-radius: 15; -fx-border-color: #ccc; -fx-border-width: 2px;">
+                     <children>
+                        <JFXButton fx:id="AjouterButton" buttonType="RAISED" layoutX="37.0" layoutY="32.0" onAction="#ajouterButton" prefHeight="33.0" prefWidth="84.0" style="-fx-background-color: #09e2a7;" text="Ajouter" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="DeleteButton" buttonType="RAISED" layoutX="142.0" layoutY="29.0" onAction="#deleteButton" prefHeight="33.0" prefWidth="84.0" style="-fx-background-color: #09e2a7;" text="Delete" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="UpdateButton" buttonType="RAISED" layoutX="253.0" layoutY="29.0" onAction="#updateButton" prefHeight="33.0" prefWidth="84.0" style="-fx-background-color: #09e2a7;" text="update" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="63.0" fitWidth="57.0" layoutX="23.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgVelo/calendar.png" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="23.0" layoutY="374.0" prefHeight="97.0" prefWidth="368.0" style="-fx-border-radius: 15; -fx-border-color: #ccc; -fx-border-width: 2px;">
+                     <children>
+                        <JFXCheckBox fx:id="confirmedChecked" checkedColor="#0fff87" layoutX="16.0" layoutY="57.0" onAction="#ConfirmedAppointemet" style="-fx-background-color: #0fff87;" text="Confirmed">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXCheckBox>
+                        <JFXCheckBox fx:id="deniedChecked" layoutX="256.0" layoutY="57.0" onAction="#DeniedAppointement" style="-fx-background-color: #ff4242;" text="Denied">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXCheckBox>
+                        <Label layoutX="16.0" layoutY="9.0" text="Appointement State">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <JFXCheckBox fx:id="pendingChecked" checkedColor="#fffc57" layoutX="141.0" layoutY="55.0" onMouseClicked="#PendingAppointement" style="-fx-background-color: #fffc57;" text="Pending">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXCheckBox>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane_logout" layoutX="273.0" layoutY="13.0" onMouseClicked="#logout" onMouseEntered="#mouse_hover_logout" onMouseExited="#mouse_exit_logout" opacity="0.7" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
+                     <children>
+                        <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgVelo/001-exit-1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane_exit" layoutX="340.0" layoutY="13.0" onMouseClicked="#exit" onMouseEntered="#mouse_hover_exit" onMouseExited="#mouse_exit_exit" opacity="0.7" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
+                     <children>
+                        <ImageView fitHeight="25.0" fitWidth="46.0" layoutX="10.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgVelo/005-exit-1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane_home" layoutX="207.0" layoutY="13.0" onMouseClicked="#homepage" onMouseEntered="#mouse_hover_homep" onMouseExited="#mouse_exit_homep" opacity="0.7" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
+                     <children>
+                        <ImageView fitHeight="33.0" fitWidth="40.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgVelo/home.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Label layoutX="782.0" layoutY="25.0" text="Appointement">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
